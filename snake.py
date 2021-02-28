@@ -21,3 +21,8 @@ class cube():
         self.dirnx = dirnx
         self.dirny = dirny  # "L", "R", "U", "D"
         self.color = color
+
+    def move(self, dirnx, dirny):
+        self.dirnx = dirnx
+        self.dirny = dirny
+        self.pos = (self.pos[0] + self.dirnx, self.pos[1] + self.dirny)
