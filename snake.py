@@ -40,3 +40,8 @@ class cube():
             circleMiddle2 = (i*dis + dis - radius*2, j*dis+8)
             pygame.draw.circle(surface, (0, 0, 0), circleMiddle, radius)
             pygame.draw.circle(surface, (0, 0, 0), circleMiddle2, radius)
+
+
+class snake():
+    body = []
+    turns = {}
