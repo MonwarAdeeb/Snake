@@ -59,3 +59,8 @@ class snake():
             if event.type == pygame.QUIT:
                 pygame.quit()
             keys = pygame.key.get_pressed()
+
+    for key in keys:
+        if keys[pygame.K_LEFT]:
+            self.dirnx = -1
+            self.dirny = 0
