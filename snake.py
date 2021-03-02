@@ -73,3 +73,7 @@ class snake():
                 self.dirny = -1
                 self.dirnx = 0
                 self.turns[self.head.pos[:]] = [self.dirnx, self.dirny]
+            elif keys[pygame.K_DOWN]:
+                self.dirny = 1
+                self.dirnx = 0
+                self.turns[self.head.pos[:]] = [self.dirnx, self.dirny]
