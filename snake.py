@@ -60,20 +60,30 @@ class snake():
                 pygame.quit()
             keys = pygame.key.get_pressed()
 
-        for key in keys:
-            if keys[pygame.K_LEFT]:
-                self.dirnx = -1
-                self.dirny = 0
-                self.turns[self.head.pos[:]] = [self.dirnx, self.dirny]
-            elif keys[pygame.K_RIGHT]:
-                self.dirnx = 1
-                self.dirny = 0
-                self.turns[self.head.pos[:]] = [self.dirnx, self.dirny]
-            elif keys[pygame.K_UP]:
-                self.dirny = -1
-                self.dirnx = 0
-                self.turns[self.head.pos[:]] = [self.dirnx, self.dirny]
-            elif keys[pygame.K_DOWN]:
-                self.dirny = 1
-                self.dirnx = 0
-                self.turns[self.head.pos[:]] = [self.dirnx, self.dirny]
+            for key in keys:
+                if keys[pygame.K_LEFT]:
+                    self.dirnx = -1
+                    self.dirny = 0
+                    self.turns[self.head.pos[:]] = [self.dirnx, self.dirny]
+                elif keys[pygame.K_RIGHT]:
+                    self.dirnx = 1
+                    self.dirny = 0
+                    self.turns[self.head.pos[:]] = [self.dirnx, self.dirny]
+                elif keys[pygame.K_UP]:
+                    self.dirny = -1
+                    self.dirnx = 0
+                    self.turns[self.head.pos[:]] = [self.dirnx, self.dirny]
+                elif keys[pygame.K_DOWN]:
+                    self.dirny = 1
+                    self.dirnx = 0
+                    self.turns[self.head.pos[:]] = [self.dirnx, self.dirny]
+
+        for i, c in enumerate(self.body):
+            p = c.pos[:]
+            if p in self.turns:
+                turn = self.turns[p]
+                c.move(turn[0], turn[1])
+                if i == len(self.body)-1:
+                    self.turns.pop(p)
+            else:
+                c.move(c.dirnx, c.dirny)
