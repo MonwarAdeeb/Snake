@@ -87,3 +87,11 @@ class snake():
                     self.turns.pop(p)
             else:
                 c.move(c.dirnx, c.dirny)
+
+    def reset(self, pos):
+        self.head = cube(pos)
+        self.body = []
+        self.body.append(self.head)
+        self.turns = {}
+        self.dirnx = 0
+        self.dirny = 1
