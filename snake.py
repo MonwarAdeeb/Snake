@@ -95,3 +95,5 @@ class snake():
         self.turns = {}
         self.dirnx = 0
         self.dirny = 1
+        tail = self.body[-1]
+        dx, dy = tail.dirnx, tail.dirn
