@@ -118,3 +118,13 @@ class snake():
                 c.draw(surface, True)
             else:
                 c.draw(surface)
+
+
+def redrawWindow():
+    global win
+    win.fill((0, 0, 0))
+    drawGrid(width, rows, win)
+    s.draw(win)
+    snack.draw(win)
+    pygame.display.update()
+    pass
