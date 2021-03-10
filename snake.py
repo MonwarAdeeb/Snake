@@ -128,3 +128,7 @@ def redrawWindow():
     snack.draw(win)
     pygame.display.update()
     pass
+
+
+def drawGrid(w, rows, surface):
+    sizeBtwn = w // rows
