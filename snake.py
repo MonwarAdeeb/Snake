@@ -141,3 +141,7 @@ def drawGrid(w, rows, surface):
 
         pygame.draw.line(surface, (255, 255, 255), (x, 0), (x, w))
         pygame.draw.line(surface, (255, 255, 255), (0, y), (w, y))
+
+
+def randomSnack(rows, item):
+    positions = item.body
