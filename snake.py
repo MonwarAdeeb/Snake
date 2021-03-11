@@ -132,3 +132,9 @@ def redrawWindow():
 
 def drawGrid(w, rows, surface):
     sizeBtwn = w // rows
+
+    x = 0
+    y = 0
+    for l in range(rows):
+        x = x + sizeBtwn
+        y = y + sizeBtwn
