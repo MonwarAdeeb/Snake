@@ -174,3 +174,7 @@ def main():
         if headPos[0] >= 20 or headPos[0] < 0 or headPos[1] >= 20 or headPos[1] < 0:
             print("Score:", len(s.body))
             s.reset((10, 10))
+
+        if s.body[0].pos == snack.pos:
+            s.addCube()
+            snack = cube(randomSnack(rows, s), color=(0, 255, 0))
