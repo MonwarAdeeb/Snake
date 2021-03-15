@@ -184,3 +184,8 @@ def main():
                 print("Score:", len(s.body))
                 s.reset((10, 10))
                 break
+
+        redrawWindow()
+
+
+main()
