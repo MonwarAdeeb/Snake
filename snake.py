@@ -165,3 +165,12 @@ def main():
     snack = cube(randomSnack(rows, s), color=(0, 255, 0))
     flag = True
     clock = pygame.time.Clock()
+
+    while flag:
+        pygame.time.delay(50)
+        clock.tick(10)
+        s.move()
+        headPos = s.head.pos
+        if headPos[0] >= 20 or headPos[0] < 0 or headPos[1] >= 20 or headPos[1] < 0:
+            print("Score:", len(s.body))
+            s.reset((10, 10))
